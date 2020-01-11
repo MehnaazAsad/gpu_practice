@@ -13,6 +13,9 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\kernels\vector_add_kernel.cl" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{0C061ED1-E3C2-4C28-915F-CA4D134C8FC9}</ProjectGuid>
@@ -59,9 +62,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../libs/opencl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>../../libs/opencl/lib/x86_64/OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
