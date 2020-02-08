@@ -11,7 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\samples\mandelbrot.cpp" />
+    <ClCompile Include="..\..\src\samples\vectoradd.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\kernels\vector_add_kernel.cl" />

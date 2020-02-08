@@ -7,14 +7,14 @@
 #include <CL/cl.h>
 #endif
 
-#define MAX_SOURCE_SIZE (0x100000)
+#define MAX_SOURCE_SIZE (0x100000) //macro substitution
 
 
-int main(void) {
+int vectoradd(void) {
     // Create the two input vectors
-    int i;
-    const int LIST_SIZE = 1024;
-    int* A = (int*)malloc(sizeof(int) * LIST_SIZE);
+    int i; //declaration
+    const int LIST_SIZE = 1024; // const doesn't exist in C
+    int* A = (int*)malloc(sizeof(int) * LIST_SIZE); //declaration + definition //malloc is func takes bytes returns void pointer which is cast to int pointer
     int* B = (int*)malloc(sizeof(int) * LIST_SIZE);
     for (i = 0; i < LIST_SIZE; i++) {
         A[i] = i;
@@ -50,7 +50,7 @@ int main(void) {
     // Create a command queue
     cl_command_queue command_queue = clCreateCommandQueueWithProperties(context, device_id, 0, &ret);
 
-    // Create memory buffers on the device for each vector 
+    // Create memory buffers on the device (GPU) for each vector 
     cl_mem a_mem_obj = clCreateBuffer(context, CL_MEM_READ_ONLY,
         LIST_SIZE * sizeof(int), NULL, &ret);
     cl_mem b_mem_obj = clCreateBuffer(context, CL_MEM_READ_ONLY,
@@ -87,6 +87,7 @@ int main(void) {
 
     // Read the memory buffer C on the device to the local variable C
     int* C = (int*)malloc(sizeof(int) * LIST_SIZE);
+    // Read GPU to CPU
     ret = clEnqueueReadBuffer(command_queue, c_mem_obj, CL_TRUE, 0,
         LIST_SIZE * sizeof(int), C, 0, NULL, NULL);
 

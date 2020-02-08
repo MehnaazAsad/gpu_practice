@@ -13,10 +13,16 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\samples">
+      <UniqueIdentifier>{30a79b87-50a0-46e5-973b-618e2a8f936e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\src\samples\mandelbrot.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\samples\vectoradd.cpp">
+      <Filter>Source Files\samples</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
