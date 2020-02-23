@@ -110,3 +110,26 @@ int vectoradd(void) {
     free(C);
     return 0;
 }
+
+/*
+vectoradd.cpp
+
+includes
+
+initializations
+load kernel source code
+open_cl inits
+    device info
+    context
+    command queue
+gpu memory buffers
+copying to "input" memory buffers
+make program from kernel source
+build program
+create opencl kernel
+kernel args
+execute kernel
+read result from gpu to cpu
+print result to screen
+clean and free memory
+*/

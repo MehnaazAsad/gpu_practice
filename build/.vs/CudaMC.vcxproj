@@ -11,11 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\samples\main.cpp" />
     <ClCompile Include="..\..\src\samples\mandelbrot.cpp" />
+    <ClCompile Include="..\..\src\samples\mandelbrot_c.cpp" />
+    <ClCompile Include="..\..\src\samples\mandelbrot_cuda.cpp" />
     <ClCompile Include="..\..\src\samples\vectoradd.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\src\kernels\mandelbrot_kernel.cl" />
     <None Include="..\..\src\kernels\vector_add_kernel.cl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\samples\mandelbrot.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -63,7 +70,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../libs/opencl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include;../../libs/opencl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -78,7 +85,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../libs/opencl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../include;../../libs/opencl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

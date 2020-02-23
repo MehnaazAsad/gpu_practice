@@ -16,18 +16,41 @@
     <Filter Include="Source Files\samples">
       <UniqueIdentifier>{30a79b87-50a0-46e5-973b-618e2a8f936e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\samples">
+      <UniqueIdentifier>{23883e7f-627a-4741-ab86-3c6a6da34bf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\kernels">
+      <UniqueIdentifier>{adb00c5c-ebd2-4de1-8def-20d0967ffaf3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\samples\mandelbrot.cpp">
-      <Filter>Source Files\samples</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\samples\vectoradd.cpp">
       <Filter>Source Files\samples</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\samples\mandelbrot_c.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\samples\mandelbrot_cuda.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\samples\mandelbrot.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\samples\main.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\samples\mandelbrot.h">
+      <Filter>Header Files\samples</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\kernels\vector_add_kernel.cl">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\kernels</Filter>
+    </None>
+    <None Include="..\..\src\kernels\mandelbrot_kernel.cl">
+      <Filter>Source Files\kernels</Filter>
     </None>
   </ItemGroup>
 </Project>
